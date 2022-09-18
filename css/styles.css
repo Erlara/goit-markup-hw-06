@@ -2,9 +2,9 @@
   /*Text colors*/
   --main-txt-cl: #757575;
   --title-txt-cl: #212121;
-  --link-txt-cl: rgb(33, 150, 243);
+  --link-txt-cl: #2196f3;
   --white-txt-cl: #ffffff;
-  --btn-active-cl: rgb(24, 140, 232);
+  --btn-active-cl: hsl(207, 82%, 50%);
   --white-txt-cl-60: rgba(255, 255, 255, 0.6);
   --black-txt-cl: #000000;
   /*Fonts*/
@@ -569,7 +569,8 @@ transition: opacity 250ms var(--timing-function);
   align-items: baseline;
 }
 
-.footer-title {
+.footer-title,
+.title-subscribe {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -616,6 +617,67 @@ transition: opacity 250ms var(--timing-function);
 .footer-socials-link:hover .footer-socials-icon,
 .footer-socials-link:focus .footer-socials-icon {
   fill: var(--main-bgr-cl);
+}
+
+/*Footer-form*/
+
+.subscribe-box {
+  margin-left: 93px;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+}
+
+.field-footer {
+  margin-right: 12px;
+}
+
+.subscribe-email {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--white-txt-cl);
+}
+
+.subscribe-email::placeholder {
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  color: var(--white-txt-cl-60);
+  letter-spacing: 0.03em;
+}
+
+.btn-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  padding: 10px 28px;
+  height: 50px;
+
+  border: none;
+  color: var(--white-txt-cl);
+  background: var(--link-txt-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+}
+
+.btn-subscribe:active {
+  background-color: var(--btn-active-cl);
+}
+
+.icon-subscribe {
+  margin-left: 10px;
+  fill: currentColor;
 }
 
 /* 2page Portfolio */
@@ -770,7 +832,7 @@ transition: opacity 250ms var(--timing-function);
   transform: translate(-50%, -50%) scale(1);
 
   transition: transform 500ms var(--timing-function);
-
+  padding: 40px;
   width: 528px;
   height: 581px;
   background-color: var(--main-bgr-cl);
@@ -796,6 +858,7 @@ transition: opacity 250ms var(--timing-function);
   justify-content: center;
 
   padding: 0;
+  background: var(--main-bgr-cl);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
@@ -804,4 +867,163 @@ transition: opacity 250ms var(--timing-function);
 
 .modal-icon {
   fill: var(--black-txt-cl);
+
+  transition: fill 250ms var(--timing-function);
+}
+
+.modal-btn:focus .modal-icon,
+.modal-btn:hover .modal-icon {
+  fill: var(--link-txt-cl);
+}
+
+.register-form-title {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-txt-cl);
+  margin-bottom: 12px;
+}
+
+.register-form-group {
+  margin-bottom: 20px;
+}
+
+.register-form-agreement {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.register-form-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.register-form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  color: var(--main-txt-cl);
+}
+
+.register-form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
+  outline: transparent;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color 250ms var(--timing-function);
+}
+
+.register-form-input:focus {
+  border-color: var(--link-txt-cl);
+}
+
+.register-form-input:focus + .register-form-icon {
+  fill: var(--link-txt-cl);
+}
+
+.register-form-icon {
+  position: absolute;
+
+  left: 12px;
+  bottom: 11px;
+
+  transition: fill 250ms var(--timing-function);
+}
+
+.register-form-message {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+
+  font-weight: 400;
+  font-size: 12px;
+
+  resize: none;
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.register-form-message::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.icon-checked {
+  opacity: 0;
+  transition: opacity 250ms var(--timing-function);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-checked {
+  opacity: 1;
+}
+
+.icon-unchecked {
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
+}
+
+.register-form-checkbox:checked + .register-form-icons .icon-unchecked {
+  opacity: 0;
+}
+
+.register-form-desc {
+  user-select: none;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+
+  color: var(--main-txt-cl);
+}
+
+.register-form-link {
+  color: var(--link-txt-cl);
+}
+
+.register-form-btn {
+  width: 200px;
+  padding: 10px 28px;
+  border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: var(--white-txt-cl);
+  background-color: var(--link-txt-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-form-btn:active {
+  background-color: var(--btn-active-cl);
 }
