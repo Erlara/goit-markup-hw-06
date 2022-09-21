@@ -565,7 +565,6 @@ transition: opacity 250ms var(--timing-function);
 
 .footer-container {
   display: flex;
-  gap: 70px;
   align-items: baseline;
 }
 
@@ -678,6 +677,14 @@ transition: opacity 250ms var(--timing-function);
 .icon-subscribe {
   margin-left: 10px;
   fill: currentColor;
+}
+
+.footer-cont-icon {
+  margin-left: 70px;
+}
+
+.footer-cont-adres {
+  flex-grow: 1;
 }
 
 /* 2page Portfolio */
@@ -910,6 +917,10 @@ transition: opacity 250ms var(--timing-function);
   margin-bottom: 10px;
 }
 
+.register-form-field:last-child {
+  margin-bottom: 0;
+}
+
 .register-form-label {
   display: block;
   margin-bottom: 4px;
@@ -934,7 +945,8 @@ transition: opacity 250ms var(--timing-function);
   transition: border-color 250ms var(--timing-function);
 }
 
-.register-form-input:focus {
+.register-form-input:focus,
+.register-form-message:focus {
   border-color: var(--link-txt-cl);
 }
 
